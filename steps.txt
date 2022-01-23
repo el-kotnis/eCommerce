@@ -1,0 +1,10 @@
+init:
+1. npm init 
+enter details: description, entry point (server.js), author
+2. create backend and frontend folders
+3. npm i express dotenv mongoose
+________________________________________________
+1. create server and app.js files and config folder in backend
+create config.env in config,
+node backend/server.js 
+to start server
