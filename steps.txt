@@ -3,8 +3,16 @@ init:
 enter details: description, entry point (server.js), author
 2. create backend and frontend folders
 3. npm i express dotenv mongoose
+4. nodemon:
+npm i nodemon --save-dev
+make changes to "scripts" in package.json (start,dev,prod).
 ________________________________________________
 1. create server and app.js files and config folder in backend
 create config.env in config,
 node backend/server.js 
 to start server
+
+2. create controllers and routes folders, and in them productController.js
+and product.js
+import product.js in app.js, add some more changes.
+
