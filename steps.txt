@@ -16,3 +16,14 @@ to start server
 and product.js
 import product.js in app.js, add some more changes.
 
+3. in Postman, create an environment for the project eCommerce,
+with variable name, initial value and current value
+create a collection named eCommerce and within it a folder Products,
+create a http GET request for Products to display all products in the database.
+
+create database.js within config, add new variable in config DB_LOCAL_URI
+write the connectDatabase function in database.js, and import it into server.js
+run: npm run dev
+was getting the error: UnhandledPromiseRejectionWarning: MongoParseError: option usecreateindex is not supported
+so removed usecreateindex: true from the connectDatabase function in 
+database.js, due to it no longer being supported in the new MongoDB version
