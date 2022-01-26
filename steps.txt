@@ -27,3 +27,7 @@ run: npm run dev
 was getting the error: UnhandledPromiseRejectionWarning: MongoParseError: option usecreateindex is not supported
 so removed usecreateindex: true from the connectDatabase function in 
 database.js, due to it no longer being supported in the new MongoDB version
+
+4. in backend create models folder, and product.js in it.
+in product.js create the schema for products.
+
