@@ -31,3 +31,11 @@ database.js, due to it no longer being supported in the new MongoDB version
 4. in backend create models folder, and product.js in it.
 in product.js create the schema for products.
 
+5. in productController.js create the function for newProduct, import 
+it into product.js in routes as a post
+
+create data folder in backend, in it product.json with sample data
+of products to test the api
+
+test POST request on the new route created,
+(did not work due to async error)
