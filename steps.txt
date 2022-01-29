@@ -39,3 +39,11 @@ of products to test the api
 
 test POST request on the new route created,
 (did not work due to async error)
+
+6. create utils folder and in it seeder.js,
+for the seeder script, add "seeder" and its location
+to package.json in "scripts"
+
+tested POST request again, worked after commenting
+out the user
+
