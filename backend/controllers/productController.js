@@ -11,9 +11,12 @@ exports.newProduct= catchAsyncErrors(async(req,res,next)=>{
     })
 })
 
-exports.getProducts = (req,res,next)=>{
+//get all products => /api/v1/products
+exports.getProducts = catchAsyncErrors(async(req,res,next)=>{
+    const products= await Products.find();
     res.status(200).json({
         success:true,
-        message: 'This route shows all products in the database.'
+        count:products.length,
+        products
     })
-}
+})
