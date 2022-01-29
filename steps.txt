@@ -49,3 +49,8 @@ out the user
 
 7. add code to productController.js in getProducts 
 to get all products
+
+8. create the route and function for getting single product 
+and test the api in Postman
+same for updateProduct and deleteProduct
+
