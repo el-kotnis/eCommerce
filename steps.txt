@@ -64,4 +64,7 @@ responses to dev and prod modes in errors.js
 10. write the code for unhandled promise rejections 
 and uncaught exceptions in server.js
 
+11. add the code to handle wrong mongoose object id error 
+in prod mode in errors.js and also the same for mongoose validation error
+
 
