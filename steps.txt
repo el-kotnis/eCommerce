@@ -58,5 +58,10 @@ same for updateProduct and deleteProduct
 create errors.js and import into it errorHandler.js,
 then import errors.js into app.js
 create catchAsyncErrors.js in middlewares and wrap all async functions
-with it in productController.js
+with it in productController.js, also created seperate error
+responses to dev and prod modes in errors.js
+
+10. write the code for unhandled promise rejections 
+and uncaught exceptions in server.js
+
 
