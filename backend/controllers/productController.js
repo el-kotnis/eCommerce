@@ -1,5 +1,6 @@
 const Products = require('../models/product')
 const catchAsyncErrors = require('../middlewares/catchAsyncErrors');
+const ErrorHandler = require('../utils/errorHandler')
 
 //create new product -> /api/v1/admin/product/new
 exports.newProduct= catchAsyncErrors(async(req,res,next)=>{
@@ -26,10 +27,7 @@ exports.getSingleProduct = catchAsyncErrors(async(req,res,next)=>{
     const product = await Products.findById(req.params.id);
 
     if(!product){
-        return res.status(404).json({
-            success:false,
-            message: 'Product not found'
-        })
+        return next(new ErrorHandler('Product not found',404));
     }
 
     res.status(200).json({
@@ -44,10 +42,7 @@ exports.updateProduct = catchAsyncErrors(async(req,res,next)=>{
     //using let instead of const as we have to update
 
     if(!product){
-        return res.status(404).json({
-            status:false,
-            message:'Product not found'
-        })
+        return next(new ErrorHandler('Product not found',404));
     }
 
     product = await Products.findByIdAndUpdate(req.params.id,req.body,{
@@ -67,10 +62,7 @@ exports.deleteProduct = catchAsyncErrors(async(req,res,next)=>{
     const product = await Products.findById(req.params.id);
 
     if(!product){
-        return res.status(404).json({
-            status:false,
-            message:'Product not found'
-        })
+        return next(new ErrorHandler('Product not found',404));
     }
 
     await product.remove();

@@ -54,3 +54,9 @@ to get all products
 and test the api in Postman
 same for updateProduct and deleteProduct
 
+9. create errorHandler.js in utils folder, in middlewares folder
+create errors.js and import into it errorHandler.js,
+then import errors.js into app.js
+create catchAsyncErrors.js in middlewares and wrap all async functions
+with it in productController.js
+
