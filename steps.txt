@@ -6,6 +6,11 @@ enter details: description, entry point (server.js), author
 4. nodemon:
 npm i nodemon --save-dev
 make changes to "scripts" in package.json (start,dev,prod).
+5. npm i bcryptjs jsonwebtoken validator nodemailer
+for user authentication and authorization purposes
+
+6. npm i cookie-parser body-parser
+for storing tokens
 ________________________________________________
 1. create server and app.js files and config folder in backend
 create config.env in config,
@@ -72,4 +77,14 @@ with the search function
 import it into getProducts function of productController
 do the same for filter and pagination functionality with filter function
 and pagination function
+
+13. installed the dependencies for user auth and token storage
+created the user model in user.js in models folder
+create authController.js in controllers folder, create the function
+for registerUser
+create auth.js in routes folder for auth routes, import it in app.js
+
+write the code for jwt token in user model, create the 
+new jwt env's in config.env
+
 
