@@ -87,4 +87,6 @@ create auth.js in routes folder for auth routes, import it in app.js
 write the code for jwt token in user model, create the 
 new jwt env's in config.env
 
+14. create function for loginUser
+
 
