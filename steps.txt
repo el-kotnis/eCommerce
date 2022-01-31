@@ -67,4 +67,9 @@ and uncaught exceptions in server.js
 11. add the code to handle wrong mongoose object id error 
 in prod mode in errors.js and also the same for mongoose validation error
 
+12. create apiFeatures.js in utils to enable search functionality
+with the search function
+import it into getProducts function of productController
+do the same for filter and pagination functionality with filter function
+and pagination function
 
