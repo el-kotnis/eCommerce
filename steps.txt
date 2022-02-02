@@ -91,6 +91,6 @@ new jwt env's in config.env
 
 15. create jwtToken.js in utils, and COOKIE_EXPIRES_TIME in config.env
 this is to create and send token and save it in the cookie
-import it into authController.js
+import it into authController.js.
 
 
