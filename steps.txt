@@ -98,5 +98,7 @@ unauthenticated users.
 import cookieParser into app.js 
 import isAuthenticatedUser function from middlewares/auth into 
 routes/product.js and apply it to the getProducts route.
+when generating token in isAuthenticatedUser, use jwt.sign() before
+jwt.verify()
 
 
