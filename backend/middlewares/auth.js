@@ -6,8 +6,9 @@ const catchAsyncErrors = require("./catchAsyncErrors");
 
 // Checks if user is authenticated or not
 exports.isAuthenticatedUser = catchAsyncErrors(async (req, res, next) => {
-
-    const { token } = jwt.sign(req.cookies,process.env.JWT_SECRET)
+    jwt.sign(req.cookies,process.env.JWT_SECRET)
+    const { token } = req.cookies
+    //const { token }=jwt.sign(req.cookies,process.env.JWT_SECRET)
 
     if (!token) {
         return next(new ErrorHandler('Login first to access this resource.', 401))
@@ -17,3 +18,14 @@ exports.isAuthenticatedUser = catchAsyncErrors(async (req, res, next) => {
 
     next()
 })
+
+//handling user roles
+exports.authorizeRoles = (...roles) => {
+    return (req, res, next) => {
+        if (!roles.includes(req.user.role)) {
+            return next(
+                new ErrorHandler(`Role (${req.user.role}) is not allowed to acccess this resource`, 403))
+        }
+        next()
+    }
+}

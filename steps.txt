@@ -98,7 +98,19 @@ unauthenticated users.
 import cookieParser into app.js 
 import isAuthenticatedUser function from middlewares/auth into 
 routes/product.js and apply it to the getProducts route.
-when generating token in isAuthenticatedUser, use jwt.sign() before
-jwt.verify()
+***there is an error with isAuthenticatedUser with jwt token 
+
+17. remove isAuthenticatedUser from the getProducts route and add 
+it to newProduct, updateProduct and deleteProduct
+create the authorizeRoles() function in middlewares/auth
+this is to authorize user roles when it comes to certain operations
+add the user to the Product model to store the details of the user
+that added that product,
+add code to newProduct in productController
+add code for handling mongoose duplicate key error in prod mode
+in middlewares/errors.js, same for wrong and expired JWT errors
+
+
+
 
 
