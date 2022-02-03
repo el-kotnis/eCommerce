@@ -110,7 +110,13 @@ add code to newProduct in productController
 add code for handling mongoose duplicate key error in prod mode
 in middlewares/errors.js, same for wrong and expired JWT errors
 
+18.create getUserProfile in controllers/authController
+to get info of the logged in user and add its route in 
+routes/auth
+create functions to get all users and single user, update and delete user
+in authController for the admin and add the routes to routes/auth
+as admin
 
-
+***still have to add password forgot/update utilities
 
 
