@@ -93,4 +93,10 @@ new jwt env's in config.env
 this is to create and send token and save it in the cookie
 import it into authController.js.
 
+16. create auth.js in middlewares, this is to protect routes from 
+unauthenticated users.
+import cookieParser into app.js 
+import isAuthenticatedUser function from middlewares/auth into 
+routes/product.js and apply it to the getProducts route.
+
 
