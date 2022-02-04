@@ -119,4 +119,10 @@ as admin
 
 ***still have to add password forgot/update utilities
 
-
+19. create the order model
+create controllers/orderController,
+in it newOrder function to create new orders,
+create routes/order, add the route for newOrder in it.
+add routes/order to app.js
+do the same for getSingleOrder, myOrders, allOrders,updateOrder,
+and deleteOrder
