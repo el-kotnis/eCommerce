@@ -126,3 +126,6 @@ create routes/order, add the route for newOrder in it.
 add routes/order to app.js
 do the same for getSingleOrder, myOrders, allOrders,updateOrder,
 and deleteOrder
+
+20. create functions for creating/updating review, get all reviews and delete review
+in productController and add those routes to routes/product
