@@ -1,4 +1,5 @@
 init:
+backend
 1. npm init 
 enter details: description, entry point (server.js), author
 2. create backend and frontend folders
@@ -11,6 +12,11 @@ for user authentication and authorization purposes
 
 6. npm i cookie-parser body-parser
 for storing tokens
+
+frontend:
+1. "npx create-react-app ."
+
+2. npm i axios react-alert react-alert-template-basic react-bootstrap react-helmet react-redux redux redux-thunk redux-devtools-extension react-router-dom
 ________________________________________________
 1. create server and app.js files and config folder in backend
 create config.env in config,
@@ -129,3 +135,11 @@ and deleteOrder
 
 20. create functions for creating/updating review, get all reviews and delete review
 in productController and add those routes to routes/product
+
+frontend
+
+21. import the bootstrap, fontawesome and required font links into
+index.html, and the scripts for jquery and bootstrap into index.html
+delete the redundant files and stuff from App.js index.js 
+create components/layout in src, in it Header.js and Footer.js
+import them in App.js
