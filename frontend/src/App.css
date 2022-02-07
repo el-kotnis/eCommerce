@@ -27,7 +27,7 @@ body {
 }
 
 nav {
-  background-color: #232f3e;
+  background-color: #64b5f6;
   padding: 1rem 1rem;
 }
 
@@ -50,11 +50,17 @@ nav {
   background-color: #ffeb3b;
   padding: 0.4rem 1.8rem;
   font-family: calibri;
+  font-size: large;
+  font-weight: 1000;
 }
 
 #cart {
-  font-size: 1rem;
-  color: white;
+  background-color: #ffeb3b;
+  padding: 0.4rem 1.8rem;
+  font-family: calibri;
+  border-radius: 5px;
+  font-size: large;
+  font-weight: 1000;
 }
 
 #cart_count {
@@ -80,7 +86,7 @@ nav {
 }
 
 .card-title a:hover {
-  color: #fa9c23;
+  color: #ffeb3b;
   text-decoration: none;
 }
 
@@ -93,8 +99,9 @@ nav {
 }
 
 #view_btn {
-  background-color: #fa9c23;
-  color: white;
+  background-color: #ffeb3b;
+  color: #64b5f6;
+  font-weight: 900;
 }
 
 .card-img-top {
@@ -162,7 +169,7 @@ footer {
 #cart_btn,
 #review_btn {
   border-radius: 2rem;
-  background-color: #fa9c23;
+  background-color: #ffeb3b;
   border: none;
   padding: 0.5rem 2rem;
 }
@@ -207,8 +214,8 @@ footer {
   height: 64px;
   margin: 8px;
   border-radius: 50%;
-  border: 6px solid #fa9c23;
-  border-color: #fa9c23 transparent;
+  border: 6px solid #ffeb3b;
+  border-color: #ffeb3b transparent;
   animation: lds-dual-ring 1.2s linear infinite;
 }
 @keyframes lds-dual-ring {
@@ -247,15 +254,15 @@ footer {
 
 #checkout_btn,
 .review-btn {
-  background-color: #fa9c23;
-  border-color: #fa9c23;
+  background-color: #ffeb3b;
+  border-color: #ffeb3b;
   margin-top: 2rem;
   border-radius: 5rem;
 }
 
 #view_order_details {
-  background-color: #fa9c23;
-  border-color: #fa9c23;
+  background-color: #ffeb3b;
+  border-color: #ffeb3b;
 }
 
 #order_summary {
@@ -307,8 +314,8 @@ footer {
 }
 
 .wrapper form .btn {
-  background-color: #fa9c23;
-  border-color: #fa9c23;
+  background-color: #ffeb3b;
+  border-color: #ffeb3b;
   color: white;
   margin-top: 2.5rem;
 }
@@ -387,7 +394,7 @@ footer {
 }
 
 .active-step {
-  background: #fa9c23;
+  background: #ffeb3b;
   color: #fff;
 }
 
@@ -395,7 +402,7 @@ footer {
   float: left;
   width: 0;
   border-top: 20px solid transparent;
-  border-left: 15px solid #fa9c23;
+  border-left: 15px solid #ffeb3b;
   border-bottom: 20px solid transparent;
   margin-left: -1px;
 }
@@ -403,9 +410,9 @@ footer {
 .triangle2-active {
   width: 0;
   float: left;
-  border-top: 20px solid #fa9c23;
+  border-top: 20px solid #ffeb3b;
   border-left: 15px solid #fff;
-  border-bottom: 20px solid #fa9c23;
+  border-bottom: 20px solid #ffeb3b;
   margin-right: -1px;
 }
 
@@ -445,8 +452,8 @@ footer {
 }
 
 #edit_profile {
-  background-color: #fa9c23;
-  border-color: #fa9c23;
+  background-color: #ffeb3b;
+  border-color: #ffeb3b;
 }
 
 /* Confirm Order */
@@ -457,8 +464,8 @@ footer {
 }
 
 .update-btn {
-  background-color: #fa9c23;
-  border-color: #fa9c23;
+  background-color: #ffeb3b;
+  border-color: #ffeb3b;
   color: white;
 }
 
@@ -468,16 +475,16 @@ footer {
 
 /* Pagination */
 .page-item.active .page-link {
-  background-color: #fa9c23;
-  border-color: #fa9c23;
+  background-color: #ffeb3b;
+  border-color: #ffeb3b;
 }
 
 .page-link {
-  color: #fa9c23;
+  color: #ffeb3b;
 }
 
 .page-link:hover {
-  color: #fa9c23;
+  color: #ffeb3b;
 }
 
 /* Admin Sidebar */
@@ -603,7 +610,7 @@ ul.CTAs a {
 }
 
 .orange {
-  color: #fa9c23;
+  color: #ffeb3b;
 }
 
 .yellow {

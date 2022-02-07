@@ -143,3 +143,5 @@ index.html, and the scripts for jquery and bootstrap into index.html
 delete the redundant files and stuff from App.js index.js 
 create components/layout in src, in it Header.js and Footer.js
 import them in App.js
+
+22. create components/Home.js and enter code for the Home page 
