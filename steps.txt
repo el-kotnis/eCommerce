@@ -17,6 +17,9 @@ frontend:
 1. "npx create-react-app ."
 
 2. npm i axios react-alert react-alert-template-basic react-bootstrap react-helmet react-redux redux redux-thunk redux-devtools-extension react-router-dom
+
+//react-devtools-extension is no longer supported
+3.npm install --save redux-devtools-extension
 ________________________________________________
 1. create server and app.js files and config folder in backend
 create config.env in config,
@@ -151,3 +154,12 @@ import them in App.js
 create components/layout/MetaData.js import Helmet into it.
 this is to create titles for pages. import MetaData into whichever 
 file that requires a title.
+
+24. create store.js in src, write the sample code for it
+import store.js and Provider into index.js
+replace React.StrictMode with Provider
+create reducers folder in src, in it productReducers.js, write sample code
+create constants folder in src, in it productConstants.js
+import the constants into productReducers and write code for
+productsReducer function 
+import productsReducer into store.js
