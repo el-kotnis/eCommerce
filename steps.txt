@@ -145,3 +145,9 @@ create components/layout in src, in it Header.js and Footer.js
 import them in App.js
 
 22. create components/Home.js and enter code for the Home page 
+
+23. add react router to App.js, <Route> tags need to be enclosed by 
+<Routes></Routes>
+create components/layout/MetaData.js import Helmet into it.
+this is to create titles for pages. import MetaData into whichever 
+file that requires a title.
