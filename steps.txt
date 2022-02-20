@@ -20,6 +20,9 @@ frontend:
 
 //react-devtools-extension is no longer supported
 3.npm install --save redux-devtools-extension
+
+4. (25.) add: "proxy":"http://127.0.0.1:4000"
+in package.json in frontend folder.
 ________________________________________________
 1. create server and app.js files and config folder in backend
 create config.env in config,
@@ -163,3 +166,8 @@ create constants folder in src, in it productConstants.js
 import the constants into productReducers and write code for
 productsReducer function 
 import productsReducer into store.js
+
+25. create actions folder, in it productActions.js
+add: "proxy":"http://127.0.0.1:4000"
+in package.json in frontend folder.
+in actions/productActions create getProducts and clearErrors functions.
