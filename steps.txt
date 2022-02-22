@@ -21,8 +21,11 @@ frontend:
 //react-devtools-extension is no longer supported
 3.npm install --save redux-devtools-extension
 
-4. (25.) add: "proxy":"http://127.0.0.1:4000"
+4. (25.) add: "proxy":"http://127.0.0.1:4000/"
 in package.json in frontend folder.
+
+5. npm install http-proxy-middleware --save
+for enabling proxy
 ________________________________________________
 1. create server and app.js files and config folder in backend
 create config.env in config,
@@ -168,6 +171,21 @@ productsReducer function
 import productsReducer into store.js
 
 25. create actions folder, in it productActions.js
-add: "proxy":"http://127.0.0.1:4000"
+add: "proxy":"http://127.0.0.1:4000/"
 in package.json in frontend folder.
 in actions/productActions create getProducts and clearErrors functions.
+
+26. npm install http-proxy-middleware --save
+for enabling proxy
+create src/setupProxy.js
+remove the "proxy" from package.json previously added.
+
+27. import useDispatch and useSelector into Home.js
+use dispatch to get all products from the backend
+write code to loop through the products with map to 
+display their details on the Home
+create product folder in components, in it Product.js
+write the html for the rendering the product info int it
+call this component in Home.js in the map function for looping 
+through the products.
+write the code for simple loading in Home.js.
