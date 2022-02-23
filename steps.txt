@@ -194,3 +194,9 @@ write the code for simple loading in Home.js.
 in index.js import positions,transitions,Provider as AlertProvider
 add AlertProvider to the render function
 this is to deal with errors in frontend
+
+29. create the constants for productDetailsReducer
+and write its function in productReducers.js
+import it into store.js
+
+create the getProductDetails function in productActions.js
