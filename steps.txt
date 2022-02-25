@@ -200,3 +200,7 @@ and write its function in productReducers.js
 import it into store.js
 
 create the getProductDetails function in productActions.js
+
+30. create ProductDetails.js in product
+import it into App.js
+for the image slider, import Carousel
