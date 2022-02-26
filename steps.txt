@@ -26,6 +26,9 @@ in package.json in frontend folder.
 
 5. npm install http-proxy-middleware --save
 for enabling proxy
+
+6. (31.) npm install react-js-pagination
+for pagination
 ________________________________________________
 1. create server and app.js files and config folder in backend
 create config.env in config,
@@ -204,3 +207,6 @@ create the getProductDetails function in productActions.js
 30. create ProductDetails.js in product
 import it into App.js
 for the image slider, import Carousel
+
+31. npm install react-js-pagination
+for pagination
