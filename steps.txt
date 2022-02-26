@@ -210,3 +210,8 @@ for the image slider, import Carousel
 
 31. npm install react-js-pagination
 for pagination
+
+32. create Search.js in layout for search functionality
+import it into header. import the search route into App.js
+
+

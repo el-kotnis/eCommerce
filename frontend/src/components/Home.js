@@ -8,6 +8,7 @@ import { useAlert } from 'react-alert';
 import Product from './product/Product';
 import Loader from './layout/Loader';
 import Pagination from 'react-js-pagination'
+import { useParams } from 'react-router-dom';
 
 const Home = () => {
 
@@ -18,13 +19,15 @@ const Home = () => {
 
     const {loading,products,error,productsCount,resPerPage} = useSelector(state=>state.products);
 
+    const {keyword}=useParams();
+
     useEffect(()=>{
         if(error){
             return alert.error(error)
         }
-        dispatch(getProducts(currentPage));
+        dispatch(getProducts(keyword,currentPage));
 
-    },[dispatch,alert,error,currentPage])
+    },[dispatch,alert,error,keyword,currentPage])
 
     function setCurrentPageNo(pageNumber) {
         setCurrentPage(pageNumber)
@@ -34,7 +37,7 @@ const Home = () => {
         <Fragment>
             {loading?<h1><Loader/></h1>:(
                 <Fragment>
-                    <MetaData title={'Best Tea and Coffee Online - Aranya'}/>
+                    <MetaData title={'Best Tea and Coffee Online - Ticofi'}/>
                         <h1 id="products_heading">Latest Products</h1>
                             <section id="products" className="container mt-5">
                                 <div className="row">
