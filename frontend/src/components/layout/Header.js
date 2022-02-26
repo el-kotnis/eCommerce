@@ -12,7 +12,9 @@ const Header = () => {
         <nav className="navbar row">
             <div className="col-12 col-md-3">
                 <div className="navbar-brand">
-                    <img src='images/mystore logo.png'/>
+                    <Link to="/">
+                        <img src='images/ticofi_logo.png'/>
+                    </Link>
                 </div>
             </div>
 

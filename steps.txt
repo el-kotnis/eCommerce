@@ -29,6 +29,9 @@ for enabling proxy
 
 6. (31.) npm install react-js-pagination
 for pagination
+
+7. (33.) npm i rc-slider
+for filtering products
 ________________________________________________
 1. create server and app.js files and config folder in backend
 create config.env in config,
@@ -214,4 +217,10 @@ for pagination
 32. create Search.js in layout for search functionality
 import it into header. import the search route into App.js
 
-
+33. npm i rc-slider
+for filtering products
+edit the link in getProducts func in productActions.js
+for the range.
+changed logo and navbar color 
+add filter code in Home.js
+add link to main screen on logo
