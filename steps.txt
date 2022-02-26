@@ -224,3 +224,6 @@ for the range.
 changed logo and navbar color 
 add filter code in Home.js
 add link to main screen on logo
+
+34. add code for category filter in Home.js
+and the required variables and links in other files
