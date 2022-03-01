@@ -230,3 +230,8 @@ and the required variables and links in other files
 
 35. added a navbar and created components for the navbar links
 imported them into App.js
+
+36. added hero banners to Home.js
+
+37. made some changes in backend, connected to online db,etc 
+for review 1 build
