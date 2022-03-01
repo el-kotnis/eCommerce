@@ -10,7 +10,7 @@ process.on('uncaughtException',err =>{
     process.exit(1);
 })
 
-//setting up config file
+//setting up config file *made changes
 if(process.env.NODE_ENV!=="PRODUCTION") require('dotenv').config({path:'backend/config/config.env'})
 
 //connecting to the database
