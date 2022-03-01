@@ -10,6 +10,7 @@ import Tea from './components/Tea';
 import Coffee from './components/Coffee';
 import Merchandise from './components/Merchandise';
 import Appliances from './components/Appliances';
+import Home2 from './components/Home2';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <div className="container container-fluid">
           <Routes> 
             <Route path="/" element={<Home />} />
+            <Route path="/home" element={<Home2 />} />
             <Route path="/about" element={<About />} />
             <Route path="/tea" element={<Tea />} />
             <Route path="/coffee" element={<Coffee />} />

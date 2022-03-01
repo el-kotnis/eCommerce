@@ -14,22 +14,22 @@ return (
 	<Nav className='shadowed'>
 		<Bars />
 		<NavMenu>
-		<NavLink to='/' activeStyle>
+		<NavLink to='/home' >
 			Home
 		</NavLink>
-		<NavLink to='/tea' activeStyle>
+		<NavLink to='/tea' >
 			Tea
 		</NavLink>
-		<NavLink to='/coffee' activeStyle>
+		<NavLink to='/coffee' >
 			Coffee
 		</NavLink>
-		<NavLink to='/appliances' activeStyle>
+		<NavLink to='/appliances' >
 			BevBuddies
 		</NavLink>
-		<NavLink to='/merch' activeStyle>
+		<NavLink to='/merch' >
 			Merchandise
 		</NavLink>
-        <NavLink to='/about' activeStyle>
+        <NavLink to='/about' >
 			About Us
 		</NavLink>
 		</NavMenu>

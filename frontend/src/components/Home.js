@@ -32,17 +32,10 @@ const Home = () => {
     const [rating, setRating] = useState(0)
 
     const categories = [
-        'Electronics',
-        'Cameras',
-        'Laptops',
-        'Accessories',
-        'Headphones',
-        'Food',
-        "Books",
-        'Clothes/Shoes',
-        'Beauty/Health',
-        'Sports',
-        'Outdoor',
+        'Tea',
+        'Coffee',
+        'Appliances',
+        'Merchandise',
         'Home'
     ]
 
@@ -69,6 +62,26 @@ const Home = () => {
             {loading?<h1><Loader/></h1>:(
                 <Fragment>
                     <MetaData title={'Best Tea and Coffee Online - Ticofi'}/>
+                        <div id="hero2" className="row">
+                            <div id="hero2-content">
+                                <h1 id="hero2-title">
+                                    THE ONE STOP SHOP
+                                </h1>
+                                <h2 id="hero2-subtitle">
+                                    For Your Tea And Coffee Needs
+                                </h2>
+                            </div>
+                        </div>
+                        <div className="hero">
+                            <div className="hero-content">
+                                <h1 className="hero-title">
+                                        THE FINEST PRODUCTS
+                                </h1>
+                                <h2 className="hero-subtitle">
+                                        From The Finest Estates
+                                </h2>
+                            </div>
+                        </div>
                         <h1 id="products_heading">Latest Products</h1>
                             <section id="products" className="container mt-5">
                                 <div className="row">
@@ -121,7 +134,6 @@ const Home = () => {
                                                     ))}
                                                 </div>
                                             </div>
-
                                         </Fragment>
                                     ):(
                                         products.map(product => (
