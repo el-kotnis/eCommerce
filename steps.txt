@@ -235,3 +235,9 @@ imported them into App.js
 
 37. made some changes in backend, connected to online db,etc 
 for review 1 build
+
+38. create userConstants.js in constants.
+create reducers/userReducers.js
+in it create authReducer function for login 
+import it into store.js.
+create actions/userAction.js and the login function in it.
