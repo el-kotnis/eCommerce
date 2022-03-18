@@ -11,6 +11,7 @@ import Coffee from './components/Coffee';
 import Merchandise from './components/Merchandise';
 import Appliances from './components/Appliances';
 import Home2 from './components/Home2';
+import Login from './components/user/Login';
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
             <Route path="/merch" element={<Merchandise />} />
             <Route path="/search/:keyword" element={<Home />} />
             <Route path="/product/:id" element={<ProductDetails />} />
+            <Route path="/login" element={<Login/>} />
           </Routes>
         </div>
         <Footer />
