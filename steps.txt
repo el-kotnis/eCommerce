@@ -32,6 +32,9 @@ for pagination
 
 7. (33.) npm i rc-slider
 for filtering products
+
+8. npm i cloudinary (outside frontend and backend)
+for images
 ________________________________________________
 1. create server and app.js files and config folder in backend
 create config.env in config,
@@ -244,4 +247,17 @@ create actions/userAction.js and the login function in it.
 
 39. create user/Login.js in components.
 Add the Link to Login button in Header.js.
-Import it into App.js
+Import it into App.js.
+
+40. add user registration constants to userConstants and userReducers function
+authReducer. create the register function in userActions for user registration.
+
+41. npm i cloudinary (outside frontend and backend)
+in backend app.js, import body-parser and cloudinary
+in config.env, create the cloudinary endpoints
+in the cloudinary dashboard, create the avatars and products
+folder in media library.
+in authController import cloudinary, create the variable
+result to add the avatar image to the avatars folder in registerUser function,
+edit the dummy avatar id and url in the user variable in registerUser
+with the id and url from the result variable.
