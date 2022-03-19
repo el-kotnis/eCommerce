@@ -1,30 +1,22 @@
-const express= require('express');
-const app=express();
+const express = require('express');
+const app = express();
 
 const cookieParser = require('cookie-parser')
-const bodyparser = require('body-parser')
-const cloudinary = require('cloudinary')
+const bodyParser = require('body-parser')
+const fileUpload = require('express-fileupload')
+// const dotenv = require('dotenv');
+const path = require('path')
 
 const errorMiddleware = require('./middlewares/errors')
 
-const path=require('path')
+// Setting up config file 
+if (process.env.NODE_ENV !== 'PRODUCTION') require('dotenv').config({ path: 'backend/config/config.env' })
+// dotenv.config({ path: 'backend/config/config.env' })
 
 app.use(express.json());
-
-app.use(bodyparser.urlencoded({extended: true}));
-
-app.use(cookieParser());
-
-cloudinary.config({
-    cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
-    api_key: process.env.CLOUDINARY_API_KEY,
-    api_secret: process.env.CLOUDINARY_API_SECRET
-})
-
-
-//setting up config file
-if(process.env.NODE_ENV!="PRODUCTION") require('dotenv').config({path:'backend/config/config.env'})
-
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(cookieParser())
+app.use(fileUpload());
 
 //import all routes
 const products=require('./routes/product');

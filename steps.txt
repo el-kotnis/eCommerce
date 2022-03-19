@@ -35,6 +35,8 @@ for filtering products
 
 8. npm i cloudinary (outside frontend and backend)
 for images
+
+9. npm i express-fileupload
 ________________________________________________
 1. create server and app.js files and config folder in backend
 create config.env in config,
@@ -261,3 +263,8 @@ in authController import cloudinary, create the variable
 result to add the avatar image to the avatars folder in registerUser function,
 edit the dummy avatar id and url in the user variable in registerUser
 with the id and url from the result variable.
+
+42. move some of the config and cloudinary code from app.js to server.js
+npm i express-fileupload
+create the Register.js in components/user
+add its route in App.js

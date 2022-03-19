@@ -12,6 +12,7 @@ import Merchandise from './components/Merchandise';
 import Appliances from './components/Appliances';
 import Home2 from './components/Home2';
 import Login from './components/user/Login';
+import Register from './components/user/Register';
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
             <Route path="/search/:keyword" element={<Home />} />
             <Route path="/product/:id" element={<ProductDetails />} />
             <Route path="/login" element={<Login/>} />
+            <Route path="/register" element={<Register/>} />
           </Routes>
         </div>
         <Footer />
