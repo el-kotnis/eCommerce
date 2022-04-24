@@ -21,8 +21,8 @@ const Login = ({history}) => {
     useEffect(() => {
 
         if (isAuthenticated) {
-            console.log(history)
-            history.push('/')
+            //console.log(history)
+            //history.push('/')
         }
 
         if (error) {

@@ -274,3 +274,6 @@ create the loadUser function in userActions.js
 import it into App.js and write the useEffect for load user
 
 44. add code to Header.js for showing logged in user.
+
+45. comment out history.push('/') from Register.js and Login.js for now.
+add code for logout.
