@@ -16,12 +16,16 @@ import Login from './components/user/Login';
 import Register from './components/user/Register';
 import {loadUser} from './actions/userActions'
 import store from './store'
+import { useDispatch, useSelector } from 'react-redux'
 
 function App() {
 
   useEffect(()=>{
     store.dispatch(loadUser)
   },[])
+
+  const { user, isAuthenticated, loading } = useSelector(state => state.auth)
+
 
   return (
     <Router>
@@ -40,10 +44,13 @@ function App() {
             <Route path="/search/:keyword" element={<Home />} />
             <Route path="/product/:id" element={<ProductDetails />} />
             <Route path="/login" element={<Login/>} />
+            {/*<Route path="/login" render={({ history }) => <Login history={history} />} />*/}
             <Route path="/register" element={<Register/>} />
           </Routes>
         </div>
-        <Footer />
+        {!loading && (!isAuthenticated || user.role !== 'admin') && (
+          <Footer />
+        )}
       </div>
     </Router>
   );

@@ -272,3 +272,5 @@ add its route in App.js
 43. create new constants for LOAD_USER in userConstants.js
 create the loadUser function in userActions.js
 import it into App.js and write the useEffect for load user
+
+44. add code to Header.js for showing logged in user.

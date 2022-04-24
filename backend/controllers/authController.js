@@ -38,6 +38,9 @@ exports.loginUser = catchAsyncErrors(async(req,res,next)=>{
     if(!email||!password){
         return next(new ErrorHandler('Please enter email and password',400))
     }
+    if(!email&&!password){
+        return next(new ErrorHandler('Please enter email and password',400))
+    }
 
     //find user in database
     const user = await User.findOne({email}).select('+password')
