@@ -286,3 +286,7 @@ create route folder in components and in it ProtectedRoute .
 48. add code to change quantity in ProductDetails.js
 create reducers, constants and actions for cart and order.
 add code for the add to cart button.
+
+49. create Cart.js in components/cart.
+import the cart state into Header.js for 
+using the number of items in the cart.
