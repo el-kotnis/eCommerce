@@ -277,3 +277,6 @@ import it into App.js and write the useEffect for load user
 
 45. comment out history.push('/') from Register.js and Login.js for now.
 add code for logout.
+
+46. create Profile.js in components/user to view user profile while logged in
+create route folder in components and in it ProtectedRoute .
