@@ -282,3 +282,7 @@ add code for logout.
 create route folder in components and in it ProtectedRoute .
 
 47. added code for UpdateProfile.js, some errors so not including for now.
+
+48. add code to change quantity in ProductDetails.js
+create reducers, constants and actions for cart and order.
+add code for the add to cart button.
