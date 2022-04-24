@@ -36,8 +36,8 @@ const Header = () => {
                 </Link>
 
                 {user ? (
-                        <div className="ml-4 dropdown d-inline">
-                            <Link to="#!" className="btn dropdown-toggle text-white mr-4" type="button" id="cart" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <div className="ml-2 dropdown d-inline p-1">
+                            <Link to="#!" className="btn dropdown-toggle text-white mr-3" type="button" id="cart2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 
                                 <figure className="avatar avatar-nav">
                                     <img

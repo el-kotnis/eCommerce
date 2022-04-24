@@ -280,3 +280,5 @@ add code for logout.
 
 46. create Profile.js in components/user to view user profile while logged in
 create route folder in components and in it ProtectedRoute .
+
+47. added code for UpdateProfile.js, some errors so not including for now.

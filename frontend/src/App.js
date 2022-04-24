@@ -19,6 +19,7 @@ import store from './store'
 import { useDispatch, useSelector } from 'react-redux'
 import Profile from './components/user/Profile';
 import ProtectedRoute from './components/route/ProtectedRoute';
+import UpdateProfile from './components/user/UpdateProfile';
 
 function App() {
 
@@ -48,13 +49,8 @@ function App() {
             <Route path="/login" element={<Login/>} />
             {/*<Route path="/login" render={({ history }) => <Login history={history} />} />*/}
             <Route path="/register" element={<Register/>} />
-            <Route path="/me" 
-              element={
-                <ProtectedRoute>
-                  <Profile/>
-                </ProtectedRoute>
-              }
-            />
+            <Route path="/me" element={<ProtectedRoute><Profile/></ProtectedRoute>}/>
+            {/*<Route path="/me/update" element={<ProtectedRoute><UpdateProfile/></ProtectedRoute>}/>*/}
           </Routes>
         </div>
         {!loading && (!isAuthenticated || user.role !== 'admin') && (

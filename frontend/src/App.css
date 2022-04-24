@@ -150,6 +150,17 @@ nav {
   color: white;
 }
 
+#cart2 {
+  background-color: #873e23;
+  padding: 0.5rem;
+  padding-right: 0.9rem;
+  font-family: calibri;
+  border-radius: 5px;
+  font-size: large;
+  font-weight: bold;
+  color: white;
+}
+
 #cart_count {
   background-color: #873e23;
   padding: 0.2rem 0.5rem;
