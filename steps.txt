@@ -321,3 +321,7 @@ create User ListOrders.js and OrderDetails.js
 added a fuck ton of shit
 
 56. more admin stuff
+
+57. updated some meta policy in index.html
+
+58.removed stripe shit

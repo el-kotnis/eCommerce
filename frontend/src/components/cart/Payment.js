@@ -25,7 +25,7 @@ const options = {
 const Payment = () => {
 
     const alert = useAlert();
-    const stripe = useStripe();
+    //const stripe = useStripe();
     const elements = useElements();
     const dispatch = useDispatch();
 
@@ -65,7 +65,7 @@ const Payment = () => {
 
         document.querySelector('#pay_btn').disabled = true;
 
-        let res;
+        /*let res;
         try {
 
             const config = {
@@ -119,7 +119,8 @@ const Payment = () => {
         } catch (error) {
             document.querySelector('#pay_btn').disabled = false;
             alert.error(error.response.data.message)
-        }
+        }*/
+        history('/success')
     }
 
     return (
@@ -134,12 +135,13 @@ const Payment = () => {
                         <h1 className="mb-4">Card Info</h1>
                         <div className="form-group">
                             <label htmlFor="card_num_field">Card Number</label>
-                            <CardNumberElement
+                            {/*<CardNumberElement
                                 type="text"
                                 id="card_num_field"
                                 className="form-control"
                                 options={options}
-                            />
+                            />*/}
+                            <input type="text"></input>
                         </div>
 
                         <div className="form-group">

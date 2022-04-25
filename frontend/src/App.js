@@ -105,12 +105,13 @@ function App() {
             <Route path="/admin/users" isAdmin={true} element={<ProtectedRoute><UsersList/></ProtectedRoute>}/>
             <Route path="/admin/user/:id" isAdmin={true} element={<ProtectedRoute><UpdateUser/></ProtectedRoute>}/>
             <Route path="/success" element={<ProtectedRoute><OrderSuccess/></ProtectedRoute>}/>
-            {/*<Route path="/orders/me" element={<ProtectedRoute><ListOrders/></ProtectedRoute>}/>*/}
+            <Route path="/payment" element={<ProtectedRoute><Payment/></ProtectedRoute>}/>
+            {/*<Route path="/orders/me" element={<ProtectedRoute><ListOrders/></ProtectedRoute>}/>
             {stripeApiKey &&
               <Route path="/payment" element={<Elements stripe={loadStripe(stripeApiKey)}>
                 <ProtectedRoute><Payment/></ProtectedRoute>
               </Elements>}/>
-            }
+            }*/}
             {/*<Route path="/payment" element={<ProtectedRoute><Payment/></ProtectedRoute>}/>
             {/*<Route path="/shipping" element={<ProtectedRoute><Shipping history/></ProtectedRoute>}/>
             <Route path="/me/update" element={<ProtectedRoute><UpdateProfile/></ProtectedRoute>}/>*/}

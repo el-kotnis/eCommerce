@@ -16,6 +16,20 @@ const ConfirmOrder = () => {
     const shippingPrice = itemsPrice > 200 ? 0 : 25
     const taxPrice = Number((0.18 * itemsPrice).toFixed(2))
     const totalPrice = (itemsPrice + shippingPrice + taxPrice).toFixed(2)
+    const { error } = useSelector(state => state.newOrder)
+    const order = {
+        orderItems: cartItems,
+        shippingInfo
+    }
+
+    const orderInfo = JSON.parse(sessionStorage.getItem('orderInfo'));
+    if (orderInfo) {
+        order.itemsPrice = orderInfo.itemsPrice
+        order.shippingPrice = orderInfo.shippingPrice
+        order.taxPrice = orderInfo.taxPrice
+        order.totalPrice = orderInfo.totalPrice
+    }
+
 
     const processToPayment = () => {
         const data = {
@@ -26,7 +40,7 @@ const ConfirmOrder = () => {
         }
 
         sessionStorage.setItem('orderInfo', JSON.stringify(data))
-        history('/payment')
+        history('/success')
     }
 
     return (
