@@ -31,6 +31,10 @@ import { loadStripe} from '@stripe/stripe-js'
 import Payment from './components/cart/Payment';
 import OrderSuccess from './components/cart/OrderSuccess';
 import ListOrders from './components/order/ListOrders';
+import OrderDetails from './components/order/OrderDetails';
+import Dashboard from './components/admin/Dashboard';
+import ProductsList from './components/admin/ProductsList';
+import NewProduct from './components/admin/NewProduct';
 
 
 function App() {
@@ -82,10 +86,14 @@ function App() {
             <Route path="/cart" element={<Cart history={history}/>} />*/}
             <Route path="/register" element={<Register/>} />
             <Route path="/cart" element={<Cart/>} />
+            <Route path="/order/:id" element={<ProtectedRoute><OrderDetails/></ProtectedRoute>}/>
+            <Route path="/dashboard" isAdmin={true} element={<ProtectedRoute><Dashboard/></ProtectedRoute>}/>
             <Route path="/orders/me" element={<ProtectedRoute><ListOrders/></ProtectedRoute>}/>
             <Route path="/me" element={<ProtectedRoute><Profile/></ProtectedRoute>}/>
             <Route path="/shipping" element={<ProtectedRoute><Shipping/></ProtectedRoute>}/>
             <Route path="/order/confirm" element={<ProtectedRoute><ConfirmOrder/></ProtectedRoute>}/>
+            <Route path="/admin/products" isAdmin={true} element={<ProtectedRoute><ProductsList/></ProtectedRoute>}/>
+            <Route path="/admin/product" isAdmin={true} element={<ProtectedRoute><NewProduct/></ProtectedRoute>}/>
             <Route path="/success" element={<ProtectedRoute><OrderSuccess/></ProtectedRoute>}/>
             {/*<Route path="/orders/me" element={<ProtectedRoute><ListOrders/></ProtectedRoute>}/>*/}
             {stripeApiKey &&

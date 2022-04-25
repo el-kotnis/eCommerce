@@ -316,3 +316,6 @@ create the Payment.js component in cart
 54. npm i mdbreact (frontend)
 create User ListOrders.js and OrderDetails.js
 (not rendering currently)
+
+55. create the components for admin dashboard
+added a fuck ton of shit

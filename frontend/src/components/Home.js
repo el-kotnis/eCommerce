@@ -35,8 +35,7 @@ const Home = () => {
         'Tea',
         'Coffee',
         'Appliances',
-        'Merchandise',
-        'Home'
+        'Merchandise'
     ]
 
     useEffect(()=>{

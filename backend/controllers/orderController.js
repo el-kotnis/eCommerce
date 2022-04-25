@@ -1,5 +1,5 @@
 const Order = require('../models/order')
-const Product = require('../models/product')
+const Products = require('../models/product')
 
 const ErrorHandler = require('../utils/errorHandler')
 const catchAsyncErrors = require('../middlewares/catchAsyncErrors')
@@ -99,7 +99,7 @@ exports.updateOrder = catchAsyncErrors(async (req, res, next) => {
 })
 
 async function updateStock(id, quantity) {
-    const product = await Product.findById(id);
+    const product = await Products.findById(id);
 
     product.stock = product.stock - quantity;
 
