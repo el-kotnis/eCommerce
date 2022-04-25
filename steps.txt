@@ -13,6 +13,8 @@ for user authentication and authorization purposes
 6. npm i cookie-parser body-parser
 for storing tokens
 
+7.npm i stripe
+
 frontend:
 1. "npx create-react-app ."
 
@@ -39,6 +41,9 @@ for images
 9. npm i express-fileupload
 
 10. npm i country-list
+
+11.npm install @stripe/react-stripe-js @stripe/stripe-js
+
 ________________________________________________
 1. create server and app.js files and config folder in backend
 create config.env in config,
@@ -296,3 +301,11 @@ using the number of items in the cart.
 50. create Shipping.js. in it create array of states. 
 
 51. create CheckoutSteps.js, ConfirmOrder.js.
+
+52. add the Stripe env's to config.env
+create paymentController.js in backend/controllers
+payment.js in routes for payment routes.
+add it to app.js
+npm i stripe (for stripe functionality in backend)
+npm install @stripe/react-stripe-js @stripe/stripe-js (frontend)
+create the Payment.js component in cart

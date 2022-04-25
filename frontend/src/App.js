@@ -1,6 +1,6 @@
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import './App.css';
-import { useEffect } from 'react';
+import { useEffect,useState } from 'react';
 import Home from './components/Home';
 import Footer from './components/layout/Footer';
 import Header from './components/layout/Header';
@@ -24,14 +24,36 @@ import Cart from './components/cart/Cart';
 import { createHashHistory } from 'history'
 import Shipping from './components/cart/Shipping';
 import ConfirmOrder from './components/cart/ConfirmOrder';
+import axios from 'axios'
+// Payment
+import { Elements,Stripe } from '@stripe/react-stripe-js'
+import { loadStripe} from '@stripe/stripe-js'
+import Payment from './components/cart/Payment';
+
 
 function App() {
+  const [stripeApiKey, setStripeApiKey] = useState('');
+  /* global Stripe */
+  //var stripeApiKey= Stripe('pk_test_51KsQrTSFQksB5o8CVWAvkFqXlTsPdTXXbmdSd2v9mYagrvuctylDFBANkEe7LKa3FXxqUIRD8uJmKA2SUcq7eqiy00pzpMWLVU')
+  useEffect(() => {
+    store.dispatch(loadUser())
 
-  useEffect(()=>{
+    async function getStripeApiKey() {
+      const { data } = await axios.get('/api/v1/stripeapi');
+
+      setStripeApiKey(data.stripeApiKey)
+      
+    }
+
+    getStripeApiKey();
+    console.log(stripeApiKey)
+
+  }, [])
+
+  /*useEffect(()=>{
     store.dispatch(loadUser)
-  },[])
+  },[])*/
 
-  const history = createHashHistory()
   const { user, isAuthenticated, loading } = useSelector(state => state.auth)
 
 
@@ -61,6 +83,12 @@ function App() {
             <Route path="/me" element={<ProtectedRoute><Profile/></ProtectedRoute>}/>
             <Route path="/shipping" element={<ProtectedRoute><Shipping/></ProtectedRoute>}/>
             <Route path="/order/confirm" element={<ProtectedRoute><ConfirmOrder/></ProtectedRoute>}/>
+            {stripeApiKey &&
+              <Route path="/payment" element={<Elements stripe={loadStripe(stripeApiKey)}>
+                <ProtectedRoute><Payment/></ProtectedRoute>
+              </Elements>}/>
+            }
+            {/*<Route path="/payment" element={<ProtectedRoute><Payment/></ProtectedRoute>}/>
             {/*<Route path="/shipping" element={<ProtectedRoute><Shipping history/></ProtectedRoute>}/>
             <Route path="/me/update" element={<ProtectedRoute><UpdateProfile/></ProtectedRoute>}/>*/}
           </Routes>

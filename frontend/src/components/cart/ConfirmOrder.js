@@ -1,16 +1,16 @@
 import React, { Fragment } from 'react'
-import { Link } from 'react-router-dom'
+import { Link,useNavigate } from 'react-router-dom'
 
 import MetaData from '../layout/MetaData'
 import CheckoutSteps from './CheckoutSteps'
 
 import { useSelector } from 'react-redux'
 
-const ConfirmOrder = ({ history }) => {
+const ConfirmOrder = () => {
 
     const { cartItems, shippingInfo } = useSelector(state => state.cart)
     const { user } = useSelector(state => state.auth)
-
+    const history = useNavigate();
     // Calculate Order Prices
     const itemsPrice = cartItems.reduce((acc, item) => acc + item.price * item.quantity, 0)
     const shippingPrice = itemsPrice > 200 ? 0 : 25
@@ -26,7 +26,7 @@ const ConfirmOrder = ({ history }) => {
         }
 
         sessionStorage.setItem('orderInfo', JSON.stringify(data))
-        history.push('/payment')
+        history('/payment')
     }
 
     return (
