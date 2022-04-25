@@ -109,7 +109,7 @@ const Payment = () => {
 
                     dispatch(createOrder(order))
 
-                    history.push('/success')
+                    history('/success')
                 } else {
                     alert.error('There is some issue while payment processing')
                 }

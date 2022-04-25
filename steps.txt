@@ -309,3 +309,5 @@ add it to app.js
 npm i stripe (for stripe functionality in backend)
 npm install @stripe/react-stripe-js @stripe/stripe-js (frontend)
 create the Payment.js component in cart
+
+53. create OrderSuccess.js
