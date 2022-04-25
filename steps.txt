@@ -325,3 +325,4 @@ added a fuck ton of shit
 57. updated some meta policy in index.html
 
 58.removed stripe shit
+removed review stars from product details

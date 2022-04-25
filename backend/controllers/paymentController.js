@@ -1,6 +1,6 @@
 const catchAsyncErrors = require('../middlewares/catchAsyncErrors')
 
-const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
+/*const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 
 // Process stripe payments   =>   /api/v1/payment/process
 exports.processPayment = catchAsyncErrors(async (req, res, next) => {
@@ -26,4 +26,4 @@ exports.sendStripApi = catchAsyncErrors(async (req, res, next) => {
         stripeApiKey: process.env.STRIPE_API_KEY
     })
 
-})
+})*/
