@@ -7,8 +7,9 @@ import { useAlert } from 'react-alert'
 import { useDispatch, useSelector } from 'react-redux'
 import { updateProduct, getProductDetails, clearErrors } from '../../actions/productActions'
 import { UPDATE_PRODUCT_RESET } from '../../constants/productConstants'
+import { useNavigate, useParams } from 'react-router-dom'
 
-const UpdateProduct = ({ match, history }) => {
+const UpdateProduct = () => {
 
     const [name, setName] = useState('');
     const [price, setPrice] = useState(0);
@@ -20,20 +21,13 @@ const UpdateProduct = ({ match, history }) => {
 
     const [oldImages, setOldImages] = useState([]);
     const [imagesPreview, setImagesPreview] = useState([])
+    const history = useNavigate();
 
     const categories = [
-        'Electronics',
-        'Cameras',
-        'Laptops',
-        'Accessories',
-        'Headphones',
-        'Food',
-        "Books",
-        'Clothes/Shoes',
-        'Beauty/Health',
-        'Sports',
-        'Outdoor',
-        'Home'
+        'Tea',
+        'Coffee',
+        'Appliances',
+        'Merchandise'
     ]
 
     const alert = useAlert();
@@ -42,7 +36,7 @@ const UpdateProduct = ({ match, history }) => {
     const { error, product } = useSelector(state => state.productDetails)
     const { loading, error: updateError, isUpdated } = useSelector(state => state.product);
 
-    const productId = match.params.id;
+    const productId = useParams();
 
     useEffect(() => {
 
@@ -70,7 +64,7 @@ const UpdateProduct = ({ match, history }) => {
 
 
         if (isUpdated) {
-            history.push('/admin/products');
+            history('/admin/products');
             alert.success('Product updated successfully');
             dispatch({ type: UPDATE_PRODUCT_RESET })
         }

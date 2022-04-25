@@ -35,6 +35,11 @@ import OrderDetails from './components/order/OrderDetails';
 import Dashboard from './components/admin/Dashboard';
 import ProductsList from './components/admin/ProductsList';
 import NewProduct from './components/admin/NewProduct';
+import UpdateProduct from './components/admin/UpdateProduct';
+import OrdersList from './components/admin/OrdersList';
+import ProcessOrder from './components/admin/ProcessOrder';
+import UsersList from './components/admin/UsersList';
+import UpdateUser from './components/admin/UpdateUser';
 
 
 function App() {
@@ -94,6 +99,11 @@ function App() {
             <Route path="/order/confirm" element={<ProtectedRoute><ConfirmOrder/></ProtectedRoute>}/>
             <Route path="/admin/products" isAdmin={true} element={<ProtectedRoute><ProductsList/></ProtectedRoute>}/>
             <Route path="/admin/product" isAdmin={true} element={<ProtectedRoute><NewProduct/></ProtectedRoute>}/>
+            <Route path="/admin/product/:id" isAdmin={true} element={<ProtectedRoute><UpdateProduct/></ProtectedRoute>}/>
+            <Route path="/admin/orders" isAdmin={true} element={<ProtectedRoute><OrdersList/></ProtectedRoute>}/>
+            <Route path="/admin/order/:id" isAdmin={true} element={<ProtectedRoute><ProcessOrder/></ProtectedRoute>}/>
+            <Route path="/admin/users" isAdmin={true} element={<ProtectedRoute><UsersList/></ProtectedRoute>}/>
+            <Route path="/admin/user/:id" isAdmin={true} element={<ProtectedRoute><UpdateUser/></ProtectedRoute>}/>
             <Route path="/success" element={<ProtectedRoute><OrderSuccess/></ProtectedRoute>}/>
             {/*<Route path="/orders/me" element={<ProtectedRoute><ListOrders/></ProtectedRoute>}/>*/}
             {stripeApiKey &&
