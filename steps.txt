@@ -37,6 +37,8 @@ for filtering products
 for images
 
 9. npm i express-fileupload
+
+10. npm i country-list
 ________________________________________________
 1. create server and app.js files and config folder in backend
 create config.env in config,
@@ -290,3 +292,5 @@ add code for the add to cart button.
 49. create Cart.js in components/cart.
 import the cart state into Header.js for 
 using the number of items in the cart.
+
+50. create Shipping.js. in it create array of states. 

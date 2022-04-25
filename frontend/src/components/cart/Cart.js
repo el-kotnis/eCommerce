@@ -1,22 +1,22 @@
 import React, { Fragment } from 'react'
-import { Link } from 'react-router-dom'
-
+import { Link,useNavigate } from 'react-router-dom'
+import {withRouter} from 'react-router'
 import MetaData from '../layout/MetaData'
-
 import { useAlert } from 'react-alert'
 import { useDispatch, useSelector } from 'react-redux'
 import { addItemToCart, removeItemFromCart } from '../../actions/cartActions'
 
-const Cart = ({ history }) => {
+const Cart = () => {
 
     const dispatch = useDispatch();
 
+    
     const { cartItems } = useSelector(state => state.cart)
 
     const removeCartItemHandler = (id) => {
         dispatch(removeItemFromCart(id))
     }
-
+    const history=useNavigate();
     const increaseQty = (id, quantity, stock) => {
         const newQty = quantity + 1;
 
@@ -36,7 +36,8 @@ const Cart = ({ history }) => {
     }
 
     const checkoutHandler = () => {
-        history.push('/login?redirect=shipping')
+        //history('/login?redirect=shipping')
+        history('/shipping')
     }
 
     return (
@@ -60,12 +61,12 @@ const Cart = ({ history }) => {
                                             </div>
 
                                             <div className="col-5 col-lg-3">
-                                                <Link to={`/products/${item.product}`}>{item.name}</Link>
+                                                <Link to={`/product/${item.product}`}>{item.name}</Link>
                                             </div>
 
 
                                             <div className="col-4 col-lg-2 mt-4 mt-lg-0">
-                                                <p id="card_item_price">${item.price}</p>
+                                                <p id="card_item_price">₹{item.price}</p>
                                             </div>
 
                                             <div className="col-4 col-lg-3 mt-4 mt-lg-0">
@@ -95,7 +96,7 @@ const Cart = ({ history }) => {
                                 <h4>Order Summary</h4>
                                 <hr />
                                 <p>Subtotal:  <span className="order-summary-values">{cartItems.reduce((acc, item) => (acc + Number(item.quantity)), 0)} (Units)</span></p>
-                                <p>Est. total: <span className="order-summary-values">${cartItems.reduce((acc, item) => acc + item.quantity * item.price, 0).toFixed(2)}</span></p>
+                                <p>Est. total: <span className="order-summary-values">₹{cartItems.reduce((acc, item) => acc + item.quantity * item.price, 0).toFixed(2)}</span></p>
 
                                 <hr />
                                 <button id="checkout_btn" className="btn btn-primary btn-block" onClick={checkoutHandler}>Check out</button>

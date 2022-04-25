@@ -1,4 +1,4 @@
-import {BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import './App.css';
 import { useEffect } from 'react';
 import Home from './components/Home';
@@ -21,6 +21,8 @@ import Profile from './components/user/Profile';
 import ProtectedRoute from './components/route/ProtectedRoute';
 import UpdateProfile from './components/user/UpdateProfile';
 import Cart from './components/cart/Cart';
+import { createHashHistory } from 'history'
+import Shipping from './components/cart/Shipping';
 
 function App() {
 
@@ -28,6 +30,7 @@ function App() {
     store.dispatch(loadUser)
   },[])
 
+  const history = createHashHistory()
   const { user, isAuthenticated, loading } = useSelector(state => state.auth)
 
 
@@ -47,12 +50,17 @@ function App() {
             <Route path="/merch" element={<Merchandise />} />
             <Route path="/search/:keyword" element={<Home />} />
             <Route path="/product/:id" element={<ProductDetails />} />
+            {/*<Route path="/login" element={<Login history={history} location/>} />*/}
             <Route path="/login" element={<Login/>} />
-            {/*<Route path="/login" render={({ history }) => <Login history={history} />} />*/}
+            {/*<Route path="/login" render={({ history }) => <Login history={history} />} />
+            <Route path="/register" element={<Register history={history}/>} />
+            <Route path="/cart" element={<Cart history={history}/>} />*/}
             <Route path="/register" element={<Register/>} />
             <Route path="/cart" element={<Cart/>} />
             <Route path="/me" element={<ProtectedRoute><Profile/></ProtectedRoute>}/>
-            {/*<Route path="/me/update" element={<ProtectedRoute><UpdateProfile/></ProtectedRoute>}/>*/}
+            <Route path="/shipping" element={<ProtectedRoute><Shipping/></ProtectedRoute>}/>
+            {/*<Route path="/shipping" element={<ProtectedRoute><Shipping history/></ProtectedRoute>}/>
+            <Route path="/me/update" element={<ProtectedRoute><UpdateProfile/></ProtectedRoute>}/>*/}
           </Routes>
         </div>
         {!loading && (!isAuthenticated || user.role !== 'admin') && (
