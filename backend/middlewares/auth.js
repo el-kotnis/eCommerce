@@ -6,7 +6,7 @@ const catchAsyncErrors = require("./catchAsyncErrors");
 
 // Checks if user is authenticated or not
 exports.isAuthenticatedUser = catchAsyncErrors(async (req, res, next) => {
-    jwt.sign(req.cookies,process.env.JWT_SECRET)
+    jwt.sign(req.cookies,`${process.env.JWT_SECRET_KEY}`)
     const { token } = req.cookies
     //const { token }=jwt.sign(req.cookies,process.env.JWT_SECRET)
 

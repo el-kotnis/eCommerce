@@ -326,3 +326,4 @@ added a fuck ton of shit
 
 58.removed stripe shit
 removed review stars from product details
+changed jwt key format
