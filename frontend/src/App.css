@@ -353,9 +353,10 @@ footer {
 
 #checkout_btn,
 .review-btn {
-  background-color: #873e23;
-  border-color: #873e23;
+  background-color: #f8ce0b;
+  border-color: #f8ce0b;
   margin-top: 2rem;
+  color: black;
   border-radius: 5rem;
 }
 
@@ -495,15 +496,15 @@ footer {
 }
 
 .active-step {
-  background: #873e23;
-  color: #fff;
+  background: #f8ce0b;
+  color: black;
 }
 
 .triangle-active {
   float: left;
   width: 0;
   border-top: 20px solid transparent;
-  border-left: 15px solid #873e23;
+  border-left: 15px solid #f8ce0b;
   border-bottom: 20px solid transparent;
   margin-left: -1px;
 }
@@ -511,9 +512,9 @@ footer {
 .triangle2-active {
   width: 0;
   float: left;
-  border-top: 20px solid #873e23;
+  border-top: 20px solid #f8ce0b;
   border-left: 15px solid #fff;
-  border-bottom: 20px solid #873e23;
+  border-bottom: 20px solid #f8ce0b;
   margin-right: -1px;
 }
 

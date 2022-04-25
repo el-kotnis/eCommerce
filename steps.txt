@@ -294,3 +294,5 @@ import the cart state into Header.js for
 using the number of items in the cart.
 
 50. create Shipping.js. in it create array of states. 
+
+51. create CheckoutSteps.js, ConfirmOrder.js.

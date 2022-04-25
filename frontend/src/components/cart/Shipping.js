@@ -2,7 +2,7 @@ import React, { Fragment, useState } from 'react'
 //import { countries } from 'countries-list'
 
 import MetaData from '../layout/MetaData'
-//import CheckoutSteps from './CheckoutSteps'
+import CheckoutSteps from './CheckoutSteps'
 import { useNavigate } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import { saveShippingInfo } from '../../actions/cartActions'
@@ -123,7 +123,7 @@ const Shipping = () => {
 
         dispatch(saveShippingInfo({ address, city, phoneNo, postalCode, istate }))
         //history.push('/confirm')
-        history('/confirm')
+        history('/order/confirm')
     }
     /*var select = document.getElementById("country_field");
     //var options = ["1", "2", "3", "4", "5"];
@@ -147,7 +147,7 @@ const Shipping = () => {
 
             <MetaData title={'Shipping Info'} />
 
-            {/*<CheckoutSteps shipping />*/}
+            <CheckoutSteps shipping />
 
             <div className="row wrapper">
                 <div className="col-10 col-lg-5">

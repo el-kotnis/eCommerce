@@ -23,6 +23,7 @@ import UpdateProfile from './components/user/UpdateProfile';
 import Cart from './components/cart/Cart';
 import { createHashHistory } from 'history'
 import Shipping from './components/cart/Shipping';
+import ConfirmOrder from './components/cart/ConfirmOrder';
 
 function App() {
 
@@ -59,6 +60,7 @@ function App() {
             <Route path="/cart" element={<Cart/>} />
             <Route path="/me" element={<ProtectedRoute><Profile/></ProtectedRoute>}/>
             <Route path="/shipping" element={<ProtectedRoute><Shipping/></ProtectedRoute>}/>
+            <Route path="/order/confirm" element={<ProtectedRoute><ConfirmOrder/></ProtectedRoute>}/>
             {/*<Route path="/shipping" element={<ProtectedRoute><Shipping history/></ProtectedRoute>}/>
             <Route path="/me/update" element={<ProtectedRoute><UpdateProfile/></ProtectedRoute>}/>*/}
           </Routes>
