@@ -44,6 +44,7 @@ for images
 
 11.npm install @stripe/react-stripe-js @stripe/stripe-js
 
+12. npm i mdbreact
 ________________________________________________
 1. create server and app.js files and config folder in backend
 create config.env in config,
@@ -311,3 +312,7 @@ npm install @stripe/react-stripe-js @stripe/stripe-js (frontend)
 create the Payment.js component in cart
 
 53. create OrderSuccess.js
+
+54. npm i mdbreact (frontend)
+create User ListOrders.js and OrderDetails.js
+(not rendering currently)
